@@ -1,0 +1,25 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "../laba5.5/laba5.5.cpp"
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace UnitTest1
+{
+    TEST_CLASS(UnitTest1)
+    {
+    public:
+        TEST_METHOD(TestMethod1)
+        {
+            double a = 0;
+            double b = 1.5;
+            double eps = 0.000001;
+            int depth = 0;
+
+            double x = root(a, b, eps, 1, depth);
+
+            Assert::AreEqual(acos(-1.0) / 4, x, eps);
+            Assert::IsTrue(depth > 0);
+        }
+    };
+}
