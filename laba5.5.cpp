@@ -14,6 +14,8 @@ double root(double a, double b, double eps, int level, int& depth)
     if (level > depth)
         depth = level;
 
+     cout << "level = " << level << endl;
+
     double m = (a + b) / 2;
 
     if (b - a < eps || f(m) == 0)
